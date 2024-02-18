@@ -1,12 +1,13 @@
 package app;
 
+import service.PrevidenciaPrivadaService;
 import service.PrevidenciaService;
 import service.SalarioService;
 
 public class Program {
     public static void main(String[] args) {
 
-        PrevidenciaService ps = new PrevidenciaService();
+        PrevidenciaService ps = new PrevidenciaPrivadaService();
 
         SalarioService salarioService = new SalarioService(ps);
 
