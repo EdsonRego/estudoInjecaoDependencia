@@ -1,8 +1,12 @@
 package service;
 
 public class SalarioService {
-    //Solucao RUIM Acoplada
-    private PrevidenciaService previdenciaService = new PrevidenciaService();
+
+    private PrevidenciaService previdenciaService;
+
+    public SalarioService(PrevidenciaService previdenciaService) {
+        this.previdenciaService = previdenciaService;
+    }
 
     public double salarioLiquido(double salarioBruto){
         double imposto = salarioBruto * 0.2;

@@ -1,11 +1,14 @@
 package app;
 
+import service.PrevidenciaService;
 import service.SalarioService;
 
 public class Program {
     public static void main(String[] args) {
 
-        SalarioService salarioService = new SalarioService();
+        PrevidenciaService ps = new PrevidenciaService();
+
+        SalarioService salarioService = new SalarioService(ps);
 
         System.out.println(salarioService.salarioLiquido(10000));
 
