@@ -4,7 +4,7 @@ public class SalarioService {
 
     private PrevidenciaService previdenciaService;
 
-    public SalarioService(PrevidenciaService previdenciaService) {
+    public void setPrevidenciaService(PrevidenciaService previdenciaService) {
         this.previdenciaService = previdenciaService;
     }
 

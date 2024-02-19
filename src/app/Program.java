@@ -9,9 +9,9 @@ public class Program {
 
         PrevidenciaService ps = new PrevidenciaPrivadaService();
 
-        SalarioService salarioService = new SalarioService(ps);
+        SalarioService salarioService = new SalarioService();
+        salarioService.setPrevidenciaService(ps);
 
         System.out.println(salarioService.salarioLiquido(10000));
-
     }
 }
